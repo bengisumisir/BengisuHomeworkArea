@@ -1,6 +1,21 @@
 employee:
-  name: Bengisu Mısır
-  age: 31
-  department: Software Test
-  email: bengisu.misir@example.com
-  phone: 555 555 55 55
+  name: Ahmet Yılmaz
+  age: 30
+  department: Software Development
+  email: ahmet.yilmaz@example.com
+  phone: 123-456-7890
+  address: Istanbul, Turkey
+  employmentStatus: Active
+  salary: 7500
+  skills:
+    - Python
+    - JavaScript
+    - Database Management
+  projects:
+    - name: Web Application Development
+      status: In Progress
+      endDate: 2024-12-31
+    - name: Mobile Application Development
+      status: Completed
+      endDate: 2023-06-30
+
