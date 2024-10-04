@@ -1,3 +1,3 @@
 # HomeworkArea
 This repository is for homeworks during automation course.
-I made changes for README.md in bengisuworkspace branch according to homework1.
+I made some changes for README.md according to homework1.
