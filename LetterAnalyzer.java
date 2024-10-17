@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
-public class LetterAnalyzer { // Class name updated to LetterAnalyzer
+public class LetterAnalyzer { // Class name
 
     public static boolean hasRepeatedLetters(String word) {
         int[] letterCount = new int[26]; // Array for 26 letters
@@ -17,13 +18,17 @@ public class LetterAnalyzer { // Class name updated to LetterAnalyzer
     }
 
     public static String createRandomWord(String word1, String word2) {
-        String combined = word1 + word2; // Combine the two words
-        List<Character> letters = new ArrayList<>();
+        HashSet<Character> uniqueLetters = new HashSet<>(); // Store unique letters
 
-        for (char letter : combined.toCharArray()) {
-            letters.add(letter); // Add letters to the list
+        // Add unique letters from both words
+        for (char letter : word1.toCharArray()) {
+            uniqueLetters.add(letter);
+        }
+        for (char letter : word2.toCharArray()) {
+            uniqueLetters.add(letter);
         }
 
+        List<Character> letters = new ArrayList<>(uniqueLetters); // Convert set to list
         Collections.shuffle(letters); // Shuffle the letters randomly
 
         StringBuilder newWord = new StringBuilder();
@@ -47,7 +52,7 @@ public class LetterAnalyzer { // Class name updated to LetterAnalyzer
         }
 
         if (foundWords.size() == 2) {
-            String randomWord = createRandomWord(foundWords.get(0), foundWords.get(1)); // Create a random word
+            String randomWord = createRandomWord(foundWords.get(0), foundWords.get(1)); // Create random word from both
             System.out.println("Found words: " + foundWords);
             System.out.println("Created random word: " + randomWord);
         } else {
