@@ -32,10 +32,16 @@ public abstract class Employee {
 
     // Method to calculate years to retirement
     // Each subclass will define its own retirement age
-    public int yearsToRetirement() {
+    public String yearsToRetirement() {
         int retirementAge = getRetirementAge();
         int currentAge = getAge();  // Get the age from the new getAge method
-        return retirementAge - currentAge;
+        int yearsToRetire = retirementAge - currentAge;
+
+        if (yearsToRetire <= 0) {
+            return "Eligible for retirement.";
+        } else {
+            return "Years to retirement: " + yearsToRetire;
+        }
     }
 
     // Abstract method: Each subclass will provide the specific retirement age

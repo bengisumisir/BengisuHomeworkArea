@@ -22,10 +22,10 @@ public class Main {
 
         // Add employees to the department
         Employee john = new Male("John", "Doe", LocalDate.of(1985, 5, 15));
-        Employee alex = new Male("Alex", "Hamilton", LocalDate.of(1978, 9, 30));
+        Employee alex = new Male("Alex", "Hamilton", LocalDate.of(1959, 7, 25));
         Employee mike = new Male("Mike", "Anderson", LocalDate.of(1992, 4, 10));
         Employee jane = new Female("Jane", "Smith", LocalDate.of(1990, 7, 25));
-        Employee emma = new Female("Emma", "Johnson", LocalDate.of(1987, 6, 12));
+        Employee emma = new Female("Emma", "Johnson", LocalDate.of(1963, 7, 25));
         Employee sophia = new Female("Sophia", "Brown", LocalDate.of(1983, 8, 3));
         hrDepartment.addEmployee(john);
         hrDepartment.addEmployee(jane);
